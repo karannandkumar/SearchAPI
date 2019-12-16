@@ -1,0 +1,15 @@
+{
+    "swarvoski": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-swarvoski-swarvoski-234932-authRole",
+            "UnauthRoleArn": "arn:aws:iam::453548175462:role/amplify-swarvoski-swarvoski-234932-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::453548175462:role/amplify-swarvoski-swarvoski-234932-authRole",
+            "Region": "us-east-2",
+            "DeploymentBucketName": "amplify-swarvoski-swarvoski-234932-deployment",
+            "UnauthRoleName": "amplify-swarvoski-swarvoski-234932-unauthRole",
+            "StackName": "amplify-swarvoski-swarvoski-234932",
+            "StackId": "arn:aws:cloudformation:us-east-2:453548175462:stack/amplify-swarvoski-swarvoski-234932/2ae76900-1f8d-11ea-a848-06f0515d2d5c",
+            "AmplifyAppId": "d3m9fef3756scc"
+        }
+    }
+}

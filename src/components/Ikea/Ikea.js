@@ -8,17 +8,17 @@ import Error from "./Error";
 
 export default class Ikea extends Component {
   state = {
-    news: [],
-    error: false,
+    news: [], 
+    error: false,  
     blank: true
   };
-
+//Checks if the props have changed
   componentDidUpdate(prevProps) {
     if (prevProps.item !== this.props.item) {
       this.handleCheck();
     }
   }
-
+//Clears timeout and waits for 200ms after every change
   handleCheck = () => {
     clearTimeout(this.timer);
     this.timer = setTimeout(() => {
@@ -26,6 +26,7 @@ export default class Ikea extends Component {
     }, 200);
   };
 
+  //Calls the API using axios
   apiCall = () => {
     this.setState({ error: false, blank: false });
     const url = this.props.url;
@@ -50,17 +51,18 @@ export default class Ikea extends Component {
       });
   };
 
+  //Iterates and displays all the results 
   renderItems() {
     if (!this.state.error && !this.state.blank) {
       return this.state.news.map(item => (
         <Box p={1} key={item.ikea_id}>
-          <IkeaSingle key={item.ikea_id} item={item} />
+          <IkeaSingle key={item.ikea_id} item={item} /> 
         </Box>
       ));
     } else if (this.state.blank) {
-      return <Blankpage />;
+      return <Blankpage />; // No Input given
     } else {
-      return <Error />;
+      return <Error />; //Error with the API
     }
   }
 

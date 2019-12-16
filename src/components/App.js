@@ -8,7 +8,7 @@ class App extends Component {
     name: ""
   };
   handleInputChange = newName => {
-    this.setState({ name: newName.target.value });
+    this.setState({ name: newName.target.value }); 
   };
 
   render() {
@@ -20,11 +20,11 @@ class App extends Component {
             id="standard-basic"
             label="Search..."
             color="primary"
-            onChange={this.handleInputChange}
+            onChange={this.handleInputChange} 
             style={{ width: "100%" }}
           />
           <Ikea
-            item={this.state.name}
+            item={this.state.name} 
           />
         </Container>
       </>
